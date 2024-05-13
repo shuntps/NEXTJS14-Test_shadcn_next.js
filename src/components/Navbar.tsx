@@ -19,13 +19,13 @@ export default function Navbar({}: Props) {
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
          <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
             <Link
-               href="#"
+               href="/"
                className="flex items-center gap-2 text-lg font-semibold md:text-base"
             >
                <h1 className="flex w-40 text-2xl">SHT Lab</h1>
             </Link>
             <Link
-               href="#"
+               href="/"
                className=" w-36 text-foreground transition-colors hover:text-foreground"
             >
                Tableau de bord
@@ -80,12 +80,14 @@ export default function Navbar({}: Props) {
                </DropdownMenuTrigger>
                <DropdownMenuContent align="end">
                   <DropdownMenuLabel>
-                     <Link href="/pages/auth/login.tsx">Mon compte</Link>
+                     <Link href="/auth/login">Mon compte</Link>
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>Paramètres</DropdownMenuItem>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>Déconnexion</DropdownMenuItem>
+                  <DropdownMenuItem>
+                     <Link href="/auth/logout">Déconnexion</Link>
+                  </DropdownMenuItem>
                </DropdownMenuContent>
             </DropdownMenu>
          </div>
