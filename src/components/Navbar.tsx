@@ -79,15 +79,16 @@ export default function Navbar({}: Props) {
                   </Button>
                </DropdownMenuTrigger>
                <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>
-                     <Link href="/auth/login">Mon compte</Link>
-                  </DropdownMenuLabel>
+                  <DropdownMenuLabel>Mon compte</DropdownMenuLabel>
+                  <DropdownMenuItem>
+                     <Link href="/auth/login">Connexion</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                     <Link href="/auth/signup">S&apos;inscrire</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>Déconnexion</DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>Paramètres</DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>
-                     <Link href="/auth/logout">Déconnexion</Link>
-                  </DropdownMenuItem>
                </DropdownMenuContent>
             </DropdownMenu>
          </div>

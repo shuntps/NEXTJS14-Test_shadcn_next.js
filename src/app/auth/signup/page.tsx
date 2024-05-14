@@ -10,15 +10,19 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 
-export default function Login() {
+export default function Signup() {
    return (
       <Card className="mx-auto max-w-sm">
          <CardHeader>
-            <CardTitle className="text-2xl">SHT Lab</CardTitle>
-            <CardDescription>Veuillez vous connecter</CardDescription>
+            <CardTitle className="text-xl">S&apos;inscrire</CardTitle>
+            <CardDescription>Entrez vos informations</CardDescription>
          </CardHeader>
          <CardContent>
             <div className="grid gap-4">
+               <div className="grid gap-2">
+                  <Label htmlFor="pseudo">Pseudo</Label>
+                  <Input id="pseudo" placeholder="Pseudo" required />
+               </div>
                <div className="grid gap-2">
                   <Label htmlFor="email">E-Mail</Label>
                   <Input
@@ -29,25 +33,17 @@ export default function Login() {
                   />
                </div>
                <div className="grid gap-2">
-                  <div className="flex items-center">
-                     <Label htmlFor="password">Mot de passe</Label>
-                     <Link
-                        href="#"
-                        className="ml-auto inline-block text-sm underline"
-                     >
-                        Mot de passe perdu?
-                     </Link>
-                  </div>
-                  <Input id="password" type="password" required />
+                  <Label htmlFor="password">Mot de passe</Label>
+                  <Input id="password" type="password" />
                </div>
                <Button type="submit" className="w-full">
-                  Connexion
+                  Inscription
                </Button>
             </div>
             <div className="mt-4 text-center text-sm">
-               Vous n&apos;avez pas de compte?{" "}
-               <Link href="#" className="underline">
-                  Inscrivez-vous
+               Vous avez déjà un compte?{" "}
+               <Link href="/auth/login" className="underline">
+                  Connexion
                </Link>
             </div>
          </CardContent>
