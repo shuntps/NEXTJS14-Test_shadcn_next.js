@@ -24,12 +24,6 @@ export default function Navbar({}: Props) {
             >
                <h1 className="flex w-40 text-2xl">SHT Lab</h1>
             </Link>
-            <Link
-               href="/"
-               className=" w-36 text-foreground transition-colors hover:text-foreground"
-            >
-               Tableau de bord
-            </Link>
          </nav>
          <Sheet>
             <SheetTrigger asChild>
@@ -49,9 +43,6 @@ export default function Navbar({}: Props) {
                      className="flex items-center gap-2 text-lg font-semibold"
                   >
                      <h1 className="text-2xl">SHT Lab</h1>
-                  </Link>
-                  <Link href="#" className="hover:text-foreground h-full">
-                     Tableau de bord
                   </Link>
                </nav>
             </SheetContent>
@@ -87,6 +78,10 @@ export default function Navbar({}: Props) {
                      <Link href="/auth/signup">S&apos;inscrire</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>Déconnexion</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                     <Link href="/dashboard">Tableau de bord</Link>
+                  </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>Paramètres</DropdownMenuItem>
                </DropdownMenuContent>
